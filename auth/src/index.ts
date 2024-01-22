@@ -39,6 +39,7 @@ const start = async () => {
   }
 
   try {
+    console.log('Connecting to mongo DB...')
     await mongoose.connect('mongodb://auth-mongo-srv:27017/auth');
     console.log('Connected to mongo DB');
   } catch (error) {
