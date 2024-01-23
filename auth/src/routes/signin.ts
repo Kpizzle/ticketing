@@ -24,7 +24,7 @@ router.post(
 
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
-      console.log('Unable to find user in sign-in route');
+      
       throw new BadRequestError('Invalid Credentials');
     }
 
@@ -34,7 +34,7 @@ router.post(
     );
 
     if (!passwordsMatch) {
-      console.log('Password does not match');
+      
       throw new BadRequestError('Invalid Credentials');
     }
 
